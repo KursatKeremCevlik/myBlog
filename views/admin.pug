@@ -11,21 +11,41 @@ html(lang='en')
     script
       include admin.js
   body
-    .AdminHomePage
-      .box-top
-        h1.hero-title Admin Home Page
+    .firstPage
+      .top-box
+        h1.hero-title Admin Page
         hr.hr
-        p.text
-          | Hoş geldin 
-          b Kürşat Kerem Çevlik
-      .new-blog
-        h2
-          b.link  Bir blog yazsan ne olur? 
-    .AdminBlogPage
-      .box-top
-        h1 Admin Blog Page
+      .butonHome
+        button.writeBlogButton Blog yaz !
+    .secondPage
+      .top-box
+        h1.hero-title Blog
         hr.hr
-        p.text
-          | Demek 
-          b blog
-          |  yazıcaksın
+      .BlogFormHome
+        .one
+          form#blogForm
+            .titleFormHome
+              .formTitle
+                b  Title 
+              input#title(type='text', autocomplete='off')
+            .dateFormHome
+              .formDate
+                b  Date 
+              input#date(type='text', autocomplete='off')
+          .ContentButonHome
+            button.ContentButon İçerik için devam et
+      .ContentFormHome
+        .two
+          form#ContentForm
+            .contentTitle
+              .formTitle
+                b  Content 
+              input#content(type='text', autocomplete='off')
+        .PreviewButonHome
+          button.PreviewButon Önizle
+      .PreviewPage
+        .PreviewBlogTitle
+        br
+        .PreviewBlogContent
+        br
+        .PreviewBlogDate

@@ -1,20 +1,117 @@
-.AdminBlogPage{
-    display: none;
-}
+.hr{ width: 300px; }
+.secondPage{ display: none; }
+.ContentFormHome{ display: none; }
+.PreviewPage{ display: none; }
 
-.hr{
-    width: 300px;
-}.link{
-    cursor: pointer;
-    color: blue;
-}
-
-.box-top{
-    min-height: 300px;
+.top-box{
+    border: 1px solid red;
+    height: 170px;
     text-align: center;
-}.text{
+}
+
+.writeBlogButton{
+    margin-top: 64px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+}.butonHome{
+    text-align: center;
+}
+
+.one{
+    text-align: center;
+    min-width: 500px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}.formTitle{
     font-size: 20px;
-    margin-top: 24px;
-}.new-blog{
+    margin-bottom: 18px;
+}#title{
+    width: 300px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.titleFormHome{
+    border: 2px solid red;
+    margin-top: 32px;
+    border-radius: 10px;
+}.dateFormHome{
+    border: 2px solid red;
+    margin-top: 32px;
+    border-radius: 10px;
+}
+
+.formDate{
+    font-size: 20px;
+    margin-bottom: 18px;
+}#date{
+    width: 250px;
+    height: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.ContentButonHome{
+    margin-top: 48px;
+}.ContentButon{
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+}
+
+.two{
+    min-width: 700px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}#content{
+    width: 500px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid grey;
+}.contentTitle{
     text-align: center;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin-top: 32px;
+}.PreviewButonHome{
+    text-align: center;
+    margin-top: 64px;
+    min-width: 700px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}.PreviewButon{
+    padding: 8px 22px;
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+}
+
+.PreviewPage{
+    min-width: 600px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+}
+.PreviewBlogTitle{
+    text-align: center;
+    font-size: 30px;
+}.PreviewBlogContent{
+    font-size: 20px;
+}.PreviewBlogDate{
+    font-size: 16px;
+    color: grey;
+    margin-left: 520px;
+}.space{
+    color: white;
 }
