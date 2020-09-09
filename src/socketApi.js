@@ -1,14 +1,14 @@
 const socketio = require('socket.io');
 const io = socketio();
 
-const socketApi = {  };
+const socketApi = {};
 socketApi.io = io;
 
 io.on('connection', (socket) => {
   // console.log('a user connected');
 
   socket.on('disconnect', () => {
-      // console.log('a user disconnected');
+    // console.log('a user disconnected');
   });
 });
 
