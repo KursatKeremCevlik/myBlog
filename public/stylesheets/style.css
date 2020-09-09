@@ -1,8 +1,20 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.AdminBlogPage{
+    display: none;
 }
 
-a {
-  color: #00B7FF;
+.hr{
+    width: 300px;
+}.lınk{
+    cursor: pointer;
+    color: blue;
+}
+
+.box-top{
+    min-height: 300px;
+    text-align: center;
+}.text{
+    font-size: 20px;
+    margin-top: 24px;
+}.new-blog{
+    text-align: center;
 }

@@ -5,10 +5,10 @@ const socketApi = {  };
 socketApi.io = io;
 
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  // console.log('a user connected');
 
   socket.on('disconnect', () => {
-      console.log('a user disconnected');
+      // console.log('a user disconnected');
   });
 });
 

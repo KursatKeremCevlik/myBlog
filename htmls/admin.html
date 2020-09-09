@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+            const socket = io.connect('http://localhost:3000');
+
+            $('.lınk').on('click', () => {
+                $('.AdminHomePage').hide();
+                $('.AdminBlogPage').show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="AdminHomePage">
+        <div class="box-top">
+            <h1 class="hero-title">Admin Home Page</h1>
+            <hr class="hr">
+            <p class="text">
+                Hoş geldin <b>Kürşat Kerem Çevlik</b>
+            </p>
+        </div>
+        <div class="new-blog">
+            <h2><b class="lınk"> Bir blog yazsan ne olur? </b></h2>
+        </div>
+    </div>
+    <div class="AdminBlogPage">
+        <div class="box-top">
+            <h1>Admin Blog Page</h1>
+            <hr class="hr">
+            <p class="text">
+                Demek <b>blog</b> yazıcaksın
+            </p>
+        </div>
+    </div>
+</body>
+</html>
