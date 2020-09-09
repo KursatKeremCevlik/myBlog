@@ -9,4 +9,8 @@ router.get('/user', (req, res, next) => {
   res.send('User Page');
 });
 
+router.get('/admin', (req, res, next) => {
+  res.render('admin');
+});
+
 module.exports = router;

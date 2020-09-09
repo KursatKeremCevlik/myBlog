@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src='http://localhost:3000/socket.io/socket.io.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    title Admin Page
+    style
+      include admin.css
+    script
+      include admin.js
+  body
+    .AdminHomePage
+      .box-top
+        h1.hero-title Admin Home Page
+        hr.hr
+        p.text
+          | Hoş geldin 
+          b Kürşat Kerem Çevlik
+      .new-blog
+        h2
+          b.link  Bir blog yazsan ne olur? 
+    .AdminBlogPage
+      .box-top
+        h1 Admin Blog Page
+        hr.hr
+        p.text
+          | Demek 
+          b blog
+          |  yazıcaksın
