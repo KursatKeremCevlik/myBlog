@@ -1,15 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-
-
-
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-router.get('/user', (req, res, next) => {
-  res.send('User Page');
+  res.render('homePage');
 });
 
 router.get('/admin', (req, res, next) => {

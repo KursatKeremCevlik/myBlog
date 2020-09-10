@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(224, 219, 219);
+}
+.space{ color: rgb(224, 219, 219); }
+
+.BlogHome{
+    border: 2px solid grey;
+    width: 650px;
+    min-height: 150px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+}
+
+.BlogTitle{
+    margin-top: 13px;
+    font-size: 30px;
+    text-align: center;
+}.BlogContent{
+    margin-top: 22px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}.BlogDate{
+    font-size: 16px;
+    color: grey;
+    margin-top: 26px;
+    margin-left: 564px;
+    margin-bottom: 10px;
+}

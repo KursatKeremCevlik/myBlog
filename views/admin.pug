@@ -11,6 +11,29 @@ html(lang='en')
     script
       include admin.js
   body
+    .ControlPage
+      .top
+        h1.title AdminPage
+        br
+        hr.hr
+      .ControlFormHome
+        form#form
+          | Kullanıcı adı ? 
+          br
+          input#username(type='text', autocomplete='off')
+          br
+          |                 Şifre 
+          br
+          input#password(type='password', autocomplete='off')
+          br
+          input#ControlButon(type='submit')
+      .control_messages
+        .WRONG_USERNAME Kullanıcı adı girmediniz
+        .WRONG_PASSWORD Şifre girmediniz
+        .CONTROL-1 Kontrol ediliyor.
+        .CONTROL-2 Kontrol ediliyor..
+        .CONTROL-3 Kontrol ediliyor...
+        .WRONG_ACCOUNT Kullanıcı adı veya şifreniz hatalı
     .firstPage
       .top-box
         h1.hero-title Admin Page

@@ -6,6 +6,37 @@
 .messages{ display: none; }
 .true_blog_save{ display: none; }
 .wrong_blog_save{ display: none; }
+.firstPage{ display: none; }
+.control_messages{ display: none; }
+
+.ControlFormHome{
+    margin-top: 36px;
+    text-align: center;
+    font-size: 20px;
+}#username{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}#password{
+    width: 200px;
+    margin-top: 20px;
+}#ControlButon{
+    margin-top: 32px;
+    padding: 8px;
+    color: white;
+    background-color: grey;
+    border-radius: 10px;
+}.control_messages{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.top{
+    text-align: center;
+    border: 1px solid red;
+    height: 200px;
+}
 
 .top-box{
     border: 1px solid red;

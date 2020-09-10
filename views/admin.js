@@ -1,9 +1,69 @@
 $(() => {
     const socket = io.connect('http://localhost:3000');
 
+    const invis = () => {
+        $('.WRONG_USERNAME').hide();
+        $('.WRONG_PASSWORD').hide();
+        $('.CONTROL-1').hide();
+        $('.CONTROL-2').hide();
+        $('.CONTROL-3').hide();
+        $('.WRONG_ACCOUNT').hide();
+    }
+
     let BlogTitle;
     let BlogContent;
     let BlogDate;
+
+    const Form = document.getElementById('form');
+    const Buton = document.getElementById('ControlButon');
+    Buton.value = 'Kontrol için gönder';
+
+    const Username = document.getElementById('username');
+    const Password = document.getElementById('password');
+    Form.addEventListener('submit', e => {
+        e.preventDefault();
+        const username = Username.value;
+        const password = Password.value;
+
+        socket.emit('AdminControl', { username, password });
+    });
+
+    socket.on('WRONG_USERNAME', () => {
+        invis();
+        $('.control_messages').show();
+        $('.WRONG_USERNAME').show();
+    });
+    socket.on('WRONG_PASSWORD', () => {
+        invis();
+        $('.control_messages').show();
+        $('.WRONG_PASSWORD').show();
+    });
+    socket.on('CONTROL-1', () => {
+        Username.value = '';
+        Password.value = '';
+        invis();
+        $('.control_messages').show();
+        $('.CONTROL-1').show();
+    });
+    socket.on('CONTROL-2', () => {
+        invis();
+        $('.control_messages').show();
+        $('.CONTROL-2').show();
+    });
+    socket.on('CONTROL-3', () => {
+        invis();
+        $('.control_messages').show();
+        $('.CONTROL-3').show();
+    });
+    socket.on('WRONG_ACCOUNT_VALUES', () => {
+        invis();
+        $('.control_messages').show();
+        $('.WRONG_ACCOUNT').show();
+    });
+    socket.on('FIND_ACCOUNT', () => {
+        $('.ControlPage').hide();
+        $('.firstPage').show();
+    });
 
     $('.writeBlogButton').on('click', () => {
         $('.firstPage').hide();
