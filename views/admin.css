@@ -2,6 +2,10 @@
 .secondPage{ display: none; }
 .ContentFormHome{ display: none; }
 .PreviewPage{ display: none; }
+.SaveButtonHome{ display: none; }
+.messages{ display: none; }
+.true_blog_save{ display: none; }
+.wrong_blog_save{ display: none; }
 
 .top-box{
     border: 1px solid red;
@@ -114,4 +118,21 @@
     margin-left: 520px;
 }.space{
     color: white;
+}
+
+.SaveButtonHome{
+    text-align: center;
+    margin-top: 48px;
+}
+.SaveButton{
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+}
+
+.messages{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 64px;
 }

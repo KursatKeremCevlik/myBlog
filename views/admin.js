@@ -27,5 +27,26 @@ $(() => {
         $('.PreviewBlogTitle').html(BlogTitle);
         $('.PreviewBlogContent').html(`<a class="space">....</a>${BlogContent}`);
         $('.PreviewBlogDate').html(BlogDate);
+        $('.SaveButtonHome').show();
+    });
+
+    $('.SaveButton').on('click', () => {
+        socket.emit('NEW_BLOG', { BlogTitle, BlogContent, BlogDate });
+    });
+
+    socket.on('TRUE_BLOG_SAVE', () => {
+        $('.PreviewPage').hide();
+        $('.SaveButtonHome').hide();
+        $('.messages').show();
+        $('.true_blog_save').show();
+        $('.wrong_blog_save').hide();
+    });
+
+    socket.on('WRONG_BLOG_SAVE', () => {
+        $('.PreviewPage').hide();
+        $('.SaveButtonHome').hide();
+        $('.messages').show();
+        $('.true_blog_save').hide();
+        $('.wrong_blog_save').show();
     });
 });
