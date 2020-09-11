@@ -7,7 +7,7 @@ const ROUTES = require('./routes/index');
 const app = express();
 
 // DB Connection
-const URL = 'mongodb://localhost/myBlog';
+const URL = 'mongodb+srv://ownerUser:12345@cluster0.zqmnm.mongodb.net/blog';
 const mongoDB = require('./helper/db')(URL);
 
 // view engine setup
