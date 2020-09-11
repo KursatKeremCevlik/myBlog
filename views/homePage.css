@@ -2,6 +2,30 @@ body{
     background-color: rgb(224, 219, 219);
 }
 .space{ color: rgb(224, 219, 219); }
+.topHR{ width: 1000px; }
+
+.top-information{
+    height: 100px;
+    vertical-align: middle;
+    display: table-cell;
+}.Name{
+    font-size: 25px;
+    margin-left: 250px;
+}.link{
+    text-decoration: none;
+}.Instagram{
+    color: rgb(247, 99, 123);
+    font-size: 20px;
+    margin-left: 100px;
+}.Linkedin{
+    color: rgb(67, 125, 250);
+    font-size: 20px;
+    margin-left: 100px;
+}.Medium{
+    color: black;
+    font-size: 20px;
+    margin-left: 100px;
+}
 
 .BlogHome{
     border: 2px solid grey;
