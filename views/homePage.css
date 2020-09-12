@@ -14,8 +14,10 @@ body{
     border-radius: 10px;
 }.dark{
     color: black;
+    margin-right: 5px;
 }.light{
     color: white;
+    margin-left: 5px;
 }
 
 
