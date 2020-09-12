@@ -12,16 +12,21 @@ html(lang='en')
       include homePage.js
   body
     .top-information
-      a.Name Kürşat Kerem Çevlik
+      a#Name.Name Kürşat Kerem Çevlik
       a.Instagram.link(href='https://www.instagram.com/krstkerem01/', target='_blank')
         img(width='20', src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/600px-Instagram_logo_2016.svg.png')
         |             İnstagram
       a.Linkedin.link(href='https://www.linkedin.com/in/k%C3%BCr%C5%9Fat-kerem-%C3%A7evlik-1b855b1b1/', target='_blank')
         img(width='20', src='https://image.flaticon.com/icons/png/512/174/174857.png')
         |             LinkedIn
-      a.Medium.link(href='https://medium.com/@kur.ker.cev', target='_blank')
+      a#Medium.Medium.link(href='https://medium.com/@kur.ker.cev', target='_blank')
         img(width='23', src='data:image/png;base64,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')
         |             Medium
+      a.buttonsHome
+        button#buton1.darkModeButon.buton.dark Dark
+        button#buton2.lightModeButon.buton.light Light
     hr.topHR
     .Blogs
       // Blogs are here
+
+//- https://kursatkeremcevlik-blog.herokuapp.com/

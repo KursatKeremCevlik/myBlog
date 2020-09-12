@@ -5,6 +5,20 @@ body{
 .space{ color: black; }
 .topHR{ width: 1000px; }
 
+.buttonsHome{
+    margin-left: 64px;
+}.buton{
+    padding: 8px;
+    background-color: grey;
+    border: 1px solid black;
+    border-radius: 10px;
+}.dark{
+    color: black;
+}.light{
+    color: white;
+}
+
+
 .top-information{
     height: 100px;
     vertical-align: middle;
