@@ -6,7 +6,7 @@ body{
 .topHR{ width: 1000px; }
 
 .buttonsHome{
-    margin-left: 64px;
+    margin-left: 75px;
 }.buton{
     padding: 8px;
     background-color: grey;
@@ -30,18 +30,19 @@ body{
     margin-left: 250px;
 }.link{
     text-decoration: none;
+    font-size: 20px;
 }.Instagram{
     color: rgb(247, 99, 123);
-    font-size: 20px;
-    margin-left: 100px;
+    margin-left: 60px;
+}.Twitter{
+    color: rgb(79, 134, 252);
+    margin-left: 60px;
 }.Linkedin{
-    color: rgb(67, 125, 250);
-    font-size: 20px;
-    margin-left: 100px;
+    color: rgb(79, 134, 252);
+    margin-left: 60px;
 }.Medium{
     color: white;
-    font-size: 20px;
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 .BlogHome{
