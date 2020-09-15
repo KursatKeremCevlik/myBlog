@@ -40,9 +40,11 @@ body{
 }.Linkedin{
     color: rgb(79, 134, 252);
     margin-left: 60px;
-}.Medium{
+}.GitHub{
     color: white;
     margin-left: 60px;
+}.GitHubİcon{
+    border-radius: 10px;
 }
 
 .BlogHome{
