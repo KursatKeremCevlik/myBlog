@@ -17,8 +17,8 @@ app.set('view engine', 'pug');
 // Route setting
 app.use('/', ROUTES);
 // Express Operations
-const expressOprt = require('./operations.js/expressOprt')(app, express, logger, cookieParser, path);
+const expressOprt = require('./operations/expressOprt')(app, express, logger, cookieParser, path);
 // Errors
-const Errors = require('./operations.js/errors')(app, createError);
+const Errors = require('./operations/errors')(app, createError);
 
 module.exports = app;
