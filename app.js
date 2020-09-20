@@ -26,7 +26,6 @@ app.use('/js/adminPage', express.static(path.join(__dirname, '/sheets/js/adminPa
 
 
 
-const routes = require('./operations/routes')(app, express, path);
 const expressOprt = require('./operations/expressOprt')(app, express, logger, cookieParser, path);
 const Errors = require('./operations/errors')(app, createError);
 
