@@ -73,3 +73,103 @@ body{
     margin-left: 564px;
     margin-bottom: 10px;
 }
+
+.chatButonHome{
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 200px;
+    max-width: 200px;
+    text-align: center;
+}.chatButon{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: green;
+    border: 2px solid white;
+}
+
+.continue_chatScreen{ text-align: center; margin-top: 64px; }
+.name_input_home{
+    margin-top: 64px;
+}#name_input{
+    width: 200px; 
+    height: 25px;
+    text-align: center;
+}.continue_chat_room{
+    margin-top: 24px;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    color: white;
+    background-color: green;
+}
+.top-box{
+    border: 1px solid red;
+    height: 100px;
+    text-align: center;
+}
+.messages_size{
+    border-radius: 10px;
+    margin-top: 32px;
+    border: 1px solid red;
+    min-width: 600px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    overflow-y: auto;
+}.message_input_home{
+    min-width: 600px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+}#message_input{
+    margin-left: 10px;
+    min-width: 470px;
+    max-width: 470px;
+    height: 22px;
+    border-radius: 10px;
+    border: 1px solid white;
+}#buton{
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}.my_message_block{
+    margin-left: 390px;
+    border-radius: 10px;
+    background-color: #1d5852;
+    max-width: 200px;
+    min-width: 200px;
+    margin-top: 10px;
+    font-size: 17px;
+}.another_message_block{
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #424950;
+    max-width: 200px;
+    min-width: 200px;
+    margin-top: 10px;
+    font-size: 17px;
+}#password_input{
+    width: 200px; 
+    height: 25px;
+    text-align: center;
+}
+
+.message_username{ text-align: center; font-size: 14px; color: rgb(167, 163, 163); }
+.my_message{ text-align: center; }
+.another_message{ text-align: center; }
+.continue_chatScreen{ display: none; }
+.wrong_name_text{ display: none; }
+.chatScreen{ display: none; }
+.username_not_available{ display: none; }
+.createAccountLink{ color: rgb(52, 52, 247); }
+.accountDatas{ margin-top: 24px; font-size: 20px; }
+.text{ margin-top: 24px; margin-bottom: 24px; font-size: 20px; }
+.info-text{ display: none; }

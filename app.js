@@ -18,12 +18,16 @@ app.get('/', (req, res) => {
 app.get('/admin', (req, res) => {
     res.sendFile(__dirname + '/sheets/htmls/adminPage.html');
 });
+app.get('/SignUp', (req, res) => {
+    res.sendFile(__dirname + '/sheets/htmls/SignUp.html');
+});
 
 app.use('/css/homePage', express.static(path.join(__dirname, '/sheets/css/homePage.css')));
 app.use('/css/adminPage', express.static(path.join(__dirname, '/sheets/css/adminPage.css')));
+app.use('/css/SignUp', express.static(path.join(__dirname, '/sheets/css/SignUp.css')));
 app.use('/js/homePage', express.static(path.join(__dirname, '/sheets/js/homePage.js')));
 app.use('/js/adminPage', express.static(path.join(__dirname, '/sheets/js/adminPage.js')));
-
+app.use('/js/SignUp', express.static(path.join(__dirname, '/sheets/js/SignUp.js')));
 
 
 const expressOprt = require('./operations/expressOprt')(app, express, logger, cookieParser, path);

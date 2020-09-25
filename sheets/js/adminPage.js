@@ -1,5 +1,6 @@
 $(() => {
     const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
+    // const socket = io.connect('http://localhost:3000/');
 
     const invis = () => {
         $('.WRONG_USERNAME').hide();

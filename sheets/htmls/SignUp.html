@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/SignUp">
+    <script src="/js/SignUp"></script>
+</head>
+<body>
+    <div class="top-box">
+        <h1>Sign Up</h1>
+    </div>
+    <div class="messages">
+        <div class="mainMessage main">Lütfen tüm alanları doldurunuz</div>
+        <div class="empty_name message">İsim girmediniz</div>
+        <div class="empty_surname message">Soyisim girmediniz</div>
+        <div class="empty_year message">Yaş girmediniz</div>
+        <div class="empty_username message">Kullanıcı adı girmediniz</div>
+        <div class="empty_password message">Şifre girmediniz</div>
+        <div class="username_not_available message">Bu kullanıcı adı kullanımda lütfen başka bir kullanıcı adı seçiniz</div>
+        <div class="success message">Başarıyla kayıt olundu. <a href="/">Geri dön</a></div>
+    </div>
+    <div class="Form-home">
+        <form id="form">
+            <div class="inputs">
+                <div class="name-text text">İsim</div>
+                <input type="text" autocomplete="off" id="name" class="text-align">
+                <div class="surname-text text">Soyisim</div>
+                <input type="text" autocomplete="off" id="surname" class="text-align">
+                <div class="year-text text">Yaş</div>
+                <input type="number" autocomplete="off" id="year" class="text-align">
+                <div class="username-text text">Kullanıcı adı</div>
+                <input type="text" autocomplete="off" id="username" class="text-align">
+                <div class="password-text text">Şifre</div>
+                <input type="password" autocomplete="off" id="password" class="text-align">
+            </div>
+            <div class="butonHome">
+            <input type="submit" value="Kayıt ol" id="saveButon">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
