@@ -10,7 +10,16 @@ const Account = require('../models/Account');
 const socketApi = { };
 socketApi.io = io;
 
+let counter = 0;
+
 io.on('connection', (socket) => {
+  counter += 1;
+  // Disconnect
+  socket.on('disconnect', () => {
+    counter -= 1;
+    io.emit('ONLINE_PEOPLE', counter);
+  });
+  io.emit('ONLINE_PEOPLE', counter);
   let username;
   socket.on('NEW_BLOG', (data) => {
     const blog = new Blog({
@@ -160,6 +169,12 @@ io.on('connection', (socket) => {
       }
     });
   });
+
+  // Online people
+  socket.on('PLEASE_ONLINE_PEOPLE', () => {
+    io.emit('ONLINE_PEOPLE', counter);
+  });
+
 });
 
 module.exports = socketApi;

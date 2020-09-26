@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="http://localhost:3000/socket.io/socket.io.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Admin Page</title>
     <link rel="stylesheet" href="/css/adminPage">
     <script src="/js/adminPage"></script>
+    <!-- <script src="../js/adminPage.js"></script>
+    <link rel="stylesheet" href="../css/adminPage.css"> -->
 </head>
 <body>
     <div class="ControlPage">
@@ -18,9 +21,9 @@
         <div class="ControlFormHome">
             <form id="form">
                 Kullanıcı adı ? <br>
-                <input type="text" id="username", autocomplete='off'> <br>
+                <input type="text" id="username" class="input" autocomplete='off'> <br>
                 Şifre <br>
-                <input type="password" id="password", autocomplete='off'> <br>
+                <input type="password" id="password" class="input" autocomplete='off'> <br>
                 <input type="submit" id="ControlButon">
             </form>
         </div>
@@ -35,7 +38,7 @@
     </div>
     <div class="firstPage">
         <div class="top-box">
-            <h1 class="hero-title">Admin Page</h1>
+            <h1 class="hero-title"></h1>
             <hr class="hr">
         </div>
         <div class="butonHome">
@@ -52,11 +55,11 @@
                 <form id="blogForm">
                     <div class="titleFormHome">
                         <div class="formTitle"><b> Title </b></div>
-                        <input type="text" id="title" autocomplete="off">
+                        <input type="text" id="title" class="input" autocomplete="off">
                     </div>
                     <div class="dateFormHome">
                         <div class="formDate"><b> Date </b></div>
-                        <input type="text" id="date" autocomplete="off">
+                        <input type="text" id="date" class="input" autocomplete="off">
                     </div>
                 </form>
                 <div class="ContentButonHome">
@@ -69,7 +72,7 @@
                 <form id="ContentForm">
                     <div class="contentTitle">
                         <div class="formTitle"><b> Content </b></div>
-                        <input type="text" id="content" autocomplete="off">
+                        <input type="text" id="content" class="input" autocomplete="off">
                     </div>
                 </form>
             </div>

@@ -64,6 +64,11 @@ $(() => {
     socket.on('FIND_ACCOUNT', () => {
         $('.ControlPage').hide();
         $('.firstPage').show();
+        socket.emit('PLEASE_ONLINE_PEOPLE');
+    });
+    // Online people
+    socket.on('ONLINE_PEOPLE', (counter) => {
+        $('.hero-title').html(`Serverda <b>${counter}</b> kişi aktif.`);
     });
 
     $('.writeBlogButton').on('click', () => {
