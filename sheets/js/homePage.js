@@ -96,6 +96,7 @@ $(() => {
                 <div class="my_message_block">
                     <div class="message_username">${data.veri.username}</div>
                     <div class="my_message">${data.veri.message}</div>
+                    <div class="time">${data.veri.time}</div>
                 </div>
             `);
         }else{
@@ -104,6 +105,7 @@ $(() => {
                 <div class="another_message_block">
                     <div class="message_username">${data.veri.username}</div>
                     <div class="another_message">${data.veri.message}</div>
+                    <div class="time">${data.veri.time}</div>
                 </div>
             `);
         }
@@ -114,7 +116,12 @@ $(() => {
         e.preventDefault();
         const Message = document.getElementById('message_input');
         const message = Message.value;
-        socket.emit('CHAT_MESSAGE', { Username, message });
+        const date = Date()
+        const words = date.split(' ');
+        const str = words[4]
+        const chars = str.split('');
+        const clock = chars[0] + chars[1] + ':' + chars[3] + chars[4];
+        socket.emit('CHAT_MESSAGE', { Username, message, clock });
         Message.value = '';
     });
 
@@ -124,6 +131,7 @@ $(() => {
             <div class="my_message_block">
                 <div class="message_username">${data.username}</div>
                 <div class="my_message">${data.message}</div>
+                <div class="time">${data.time}</div>
             </div>
         `);
         }else{
@@ -131,6 +139,7 @@ $(() => {
             <div class="another_message_block">
                 <div class="message_username">${data.username}</div>
                 <div class="another_message">${data.message}</div>
+                <div class="time">${data.time}</div>
             </div>
             `);
         }

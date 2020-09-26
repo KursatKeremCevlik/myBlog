@@ -103,16 +103,18 @@ io.on('connection', (socket) => {
   socket.on('CHAT_MESSAGE', (data) => {
     const username = data.Username;
     const message = data.message;
+    const time = data.clock;
     const confirm = 1
 
     const messageData = new Message({
       username: data.Username,
-      message: data.message
+      message: data.message,
+      time: data.clock
     });
     messageData.save();
 
-    socket.emit('NEW_CHAT_MESSAGE', { username, message, confirm });
-    socket.broadcast.emit('NEW_CHAT_MESSAGE', { username, message });
+    socket.emit('NEW_CHAT_MESSAGE', { username, message, confirm, time });
+    socket.broadcast.emit('NEW_CHAT_MESSAGE', { username, message, time });
   });
 
   socket.on('NEW_ACCOUNT_DATAS', (data) => {
