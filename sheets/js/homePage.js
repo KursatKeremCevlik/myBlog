@@ -127,14 +127,16 @@ $(() => {
 
     socket.on('NEW_CHAT_MESSAGE', (data) => {
         if(data.confirm){
+            // my message
             $('.messages_size').append(`
             <div class="my_message_block">
                 <div class="message_username">${data.username}</div>
                 <div class="my_message">${data.message}</div>
                 <div class="time">${data.time}</div>
             </div>
-        `);
+            `);
         }else{
+            // another message
             $('.messages_size').append(`
             <div class="another_message_block">
                 <div class="message_username">${data.username}</div>
