@@ -1,6 +1,6 @@
 $(() => {
-    const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
-    // const socket = io.connect('http://localhost:3000/');
+    // const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
+    const socket = io.connect('http://localhost:3000/');
     let Username;
 
     socket.emit('PLEASE_BLOG_DATAS');

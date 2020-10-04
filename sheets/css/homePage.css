@@ -4,10 +4,7 @@ body{
 }
 .space{ color: black; }
 .topHR{ width: 1000px; }
-
-.buttonsHome{
-    margin-left: 75px;
-}.buton{
+.buton{
     padding: 8px;
     background-color: grey;
     border: 1px solid black;
@@ -25,26 +22,39 @@ body{
     height: 100px;
     vertical-align: middle;
     display: table-cell;
-}.Name{
+    border: 1px solid red;
+    min-width: 1300px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttonsHome{
+    margin-left: 32px;
+}
+.Name{
     font-size: 25px;
+    border: 1px solid red;
     margin-left: 250px;
 }.link{
     text-decoration: none;
     font-size: 20px;
+    margin-left: 24px;
+    border: 1px solid red;
 }.Instagram{
     color: rgb(247, 99, 123);
-    margin-left: 60px;
+    border: 1px solid red;
 }.Twitter{
     color: rgb(79, 134, 252);
-    margin-left: 60px;
+    border: 1px solid red;
 }.Linkedin{
     color: rgb(79, 134, 252);
-    margin-left: 60px;
+    border: 1px solid red;
 }.GitHub{
     color: white;
-    margin-left: 60px;
+    border: 1px solid red;
 }.GitHubIcon{
     border-radius: 10px;
+    border: 1px solid red;
 }
 
 .BlogHome{
@@ -174,3 +184,9 @@ body{
 .text{ margin-top: 24px; margin-bottom: 24px; font-size: 20px; }
 .info-text{ display: none; }
 .time{ font-size: 14px; color: gray; margin-left: 163px; }
+.homeScreen{ 
+    min-width: 1300px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
