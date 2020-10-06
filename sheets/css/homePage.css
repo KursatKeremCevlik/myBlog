@@ -12,9 +12,11 @@ body{
 }.dark{
     color: black;
     margin-right: 5px;
+    outline: none;
 }.light{
     color: white;
     margin-left: 5px;
+    outline: none;
 }
 
 
@@ -37,16 +39,22 @@ body{
     text-decoration: none;
     font-size: 20px;
     margin-left: 24px;
+    outline: none;
 }.Instagram{
     color: rgb(247, 99, 123);
+    outline: none;
 }.Twitter{
     color: rgb(79, 134, 252);
+    outline: none;
 }.Linkedin{
     color: rgb(79, 134, 252);
+    outline: none;
 }.GitHub{
     color: white;
+    outline: none;
 }.GitHubIcon{
     border-radius: 10px;
+    outline: none;
 }
 
 .BlogHome{
@@ -90,6 +98,7 @@ body{
     color: white;
     background-color: green;
     border: 2px solid white;
+    outline: none;
 }
 
 .continue_chatScreen{ text-align: center; margin-top: 64px; }
@@ -99,6 +108,7 @@ body{
     width: 200px; 
     height: 25px;
     text-align: center;
+    outline: none;
 }.continue_chat_room{
     margin-top: 24px;
     width: 120px;
@@ -107,6 +117,7 @@ body{
     border: 1px solid grey;
     color: white;
     background-color: green;
+    outline: none;
 }
 .top-box{
     border: 1px solid red;
@@ -136,12 +147,14 @@ body{
     height: 22px;
     border-radius: 10px;
     border: 1px solid white;
+    outline: none;
 }#buton{
     color: white;
     background-color: green;
     border-radius: 10px;
     width: 100px;
     height: 30px;
+    outline: none;
 }.my_message_block{
     margin-left: 390px;
     border-radius: 10px;
@@ -162,6 +175,7 @@ body{
     width: 200px; 
     height: 25px;
     text-align: center;
+    outline: none;
 }
 
 .message_username{ margin-left: 7px; font-size: 14px; color: rgb(167, 163, 163); }
@@ -171,7 +185,7 @@ body{
 .wrong_name_text{ display: none; }
 .chatScreen{ display: none; }
 .username_not_available{ display: none; }
-.createAccountLink{ color: rgb(52, 52, 247); }
+.createAccountLink{ color: rgb(52, 52, 247); outline: none; }
 .accountDatas{ margin-top: 24px; font-size: 20px; }
 .text{ margin-top: 24px; margin-bottom: 24px; font-size: 20px; }
 .info-text{ display: none; }
