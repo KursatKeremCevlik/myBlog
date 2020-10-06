@@ -162,6 +162,7 @@ body{
     max-width: 200px;
     min-width: 200px;
     margin-top: 10px;
+    word-wrap: break-word;
     font-size: 17px;
 }.another_message_block{
     margin-left: 10px;
@@ -170,6 +171,7 @@ body{
     max-width: 200px;
     min-width: 200px;
     margin-top: 10px;
+    word-wrap: break-word;
     font-size: 17px;
 }#password_input{
     width: 200px; 
