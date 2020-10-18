@@ -1,200 +1,111 @@
 body{
-    background-color: black;
-    color: white;
-}
-.space{ color: black; }
-.topHR{ width: 1000px; }
-.buton{
-    padding: 8px;
-    background-color: grey;
-    border: 1px solid black;
-    border-radius: 10px;
-}.dark{
-    color: black;
-    margin-right: 5px;
-    outline: none;
-}.light{
-    color: white;
-    margin-left: 5px;
-    outline: none;
-}
-
-
-.top-information{
-    height: 100px;
-    vertical-align: middle;
-    display: table-cell;
-    min-width: 1300px;
-    max-width: 1300px;
+    height: 100%;
+    background-color: rgb(46, 44, 44);
+}.hero{
+    min-width: 990px;
+    max-width: 1310px;
     margin-left: auto;
     margin-right: auto;
-}
-.buttonsHome{
-    margin-left: 32px;
-}
-.Name{
-    font-size: 25px;
-    margin-left: 250px;
-}.link{
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 24px;
-    outline: none;
-}.Instagram{
-    color: rgb(247, 99, 123);
-    outline: none;
-}.Twitter{
-    color: rgb(79, 134, 252);
-    outline: none;
-}.Linkedin{
-    color: rgb(79, 134, 252);
-    outline: none;
-}.GitHub{
-    color: white;
-    outline: none;
-}.GitHubIcon{
-    border-radius: 10px;
-    outline: none;
+    min-height: 455px;
+    max-height: 605px;
 }
 
-.BlogHome{
-    border: 2px solid grey;
-    width: 650px;
-    min-height: 150px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 32px;
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}.column{
+    background-color: rgb(59, 4, 104);
+    min-width: 100px;
+    max-width: 100px;
+    height: 97vh;
+    float: left;
+    border-radius: 5px;
 }
-
-.BlogTitle{
-    margin-top: 13px;
-    font-size: 30px;
+.piece{
     text-align: center;
-}.BlogContent{
-    margin-top: 22px;
-    font-size: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-}.BlogDate{
-    font-size: 16px;
-    color: rgb(163, 155, 155);
-    margin-top: 26px;
-    margin-left: 564px;
-    margin-bottom: 10px;
+    border: 3px solid rgb(94, 62, 4);
+    border-radius: 5px;
+    height: 75px;
+    cursor: pointer;
+    background-color: rgb(94, 62, 4);
 }
-
-.chatButonHome{
-    margin-top: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 200px;
-    max-width: 200px;
-    text-align: center;
-}.chatButon{
-    width: 150px;
-    height: 40px;
-    border-radius: 10px;
-    color: white;
-    background-color: green;
-    border: 2px solid white;
-    outline: none;
-}
-
-.continue_chatScreen{ text-align: center; margin-top: 64px; }
-.name_input_home{
-    margin-top: 64px;
-}#name_input{
-    width: 200px; 
-    height: 25px;
-    text-align: center;
-    outline: none;
-}.continue_chat_room{
-    margin-top: 24px;
-    width: 120px;
-    height: 30px;
-    border-radius: 10px;
-    border: 1px solid grey;
-    color: white;
-    background-color: green;
-    outline: none;
-}
-.top-box{
-    border: 1px solid red;
-    height: 100px;
-    text-align: center;
-}
-.messages_size{
-    border-radius: 10px;
-    margin-top: 32px;
-    border: 1px solid red;
-    min-width: 600px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 300px;
-    overflow-y: auto;
-}.message_input_home{
-    min-width: 600px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.another{
     margin-top: 12px;
-}#message_input{
-    margin-left: 10px;
-    min-width: 470px;
-    max-width: 470px;
-    height: 22px;
-    border-radius: 10px;
-    border: 1px solid white;
-    outline: none;
-}#buton{
-    color: white;
-    background-color: green;
-    border-radius: 10px;
-    width: 100px;
-    height: 30px;
-    outline: none;
-}.my_message_block{
-    margin-left: 390px;
-    border-radius: 10px;
-    background-color: #1d5852;
-    max-width: 200px;
-    min-width: 200px;
-    margin-top: 10px;
-    word-wrap: break-word;
-    font-size: 17px;
-}.another_message_block{
-    margin-left: 10px;
-    border-radius: 10px;
-    background-color: #424950;
-    max-width: 200px;
-    min-width: 200px;
-    margin-top: 10px;
-    word-wrap: break-word;
-    font-size: 17px;
-}#password_input{
-    width: 200px; 
-    height: 25px;
-    text-align: center;
-    outline: none;
+    background-color: rgb(59, 4, 104);
+}
+.row-text{
+    font-size: 20px;
+    margin-top: 24px;
+}
+.page{
+    display: none; 
+    border: 1px solid rgb(46, 44, 44);
+}
+.mainPage{border: 1px solid rgb(46, 44, 44);}
+.clientPage{
+    border: 2px solid red;
+    /* min-width: 1210px;
+    max-width: 1210px; */
+    height: 96vh;
+    margin-left: 115px;
+    border-radius: 5px;
+    overflow-y: auto;
 }
 
-.message_username{ margin-left: 7px; font-size: 14px; color: rgb(167, 163, 163); }
-.my_message{ text-align: center; }
-.another_message{ text-align: center; }
-.continue_chatScreen{ display: none; }
-.wrong_name_text{ display: none; }
-.chatScreen{ display: none; }
-.username_not_available{ display: none; }
-.createAccountLink{ color: rgb(52, 52, 247); outline: none; }
-.accountDatas{ margin-top: 24px; font-size: 20px; }
-.text{ margin-top: 24px; margin-bottom: 24px; font-size: 20px; }
-.info-text{ display: none; }
-.time{ font-size: 14px; color: gray; margin-left: 163px; }
-.homeScreen{ 
-    min-width: 1300px;
-    max-width: 1300px;
+.blog{
+    border: 3px solid grey;
+    border-radius: 5px;
+    min-width: 800px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}.blog-title{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 12px;
+    margin-top: 6px;
+}.blog-content{
+    font-size: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 16px;
+    margin-left: 16px;
+}.blog-date{
+    color: grey;
+    margin-bottom: 6px;
+    margin-left: 700px;
 }
+
+.name{
+    margin-top: 128px;
+    font-size: 40px;
+    text-align: center;
+}
+.links{
+    text-align: center;
+    margin-top: 64px;
+}.buton{
+    height: 40px;
+    width: 110px;
+    margin-left: 24px;
+    margin-right: 24px;
+    background-color: rgb(46, 44, 44);
+    color: white;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.instagram:hover{background-color: rgb(241, 94, 119); width: 130px; height: 50px; font-size: 16px;}
+.github:hover{background-color: black; width: 130px; height: 50px; font-size: 16px;}
+.linkedin:hover{background-color: rgb(5, 55, 71); width: 130px; height: 50px; font-size: 16px;}
+
+.space{margin-right: 16px;}
+
+.chatPage{text-align: center;}
+.commentPage{text-align: center;}
+.codePage{text-align: center;}
+.remain{margin-top: 256px;}
