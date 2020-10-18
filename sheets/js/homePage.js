@@ -16,9 +16,19 @@ $(() => {
   socket.on('BLOG_DATAS', (blogData) => {
     $('.blogPage').append(`
     <div class="blog">
-      <div class="blog-title">${blogData.title}</div>
-      <div class="blog-content"><a class="space"></a> ${blogData.content}</div> 
-      <div class="blog-date">${blogData.date}</div>
+      <div class="blog-title text">${blogData.title}</div>
+      <div class="blog-content text"><a class="space"></a> ${blogData.content}</div> 
+      <div class="blog-date text">${blogData.date}</div>
+    </div>
+    <div class="blog">
+      <div class="blog-title text">${blogData.title}</div>
+      <div class="blog-content text"><a class="space"></a> ${blogData.content}</div> 
+      <div class="blog-date text">${blogData.date}</div>
+    </div>
+    <div class="blog">
+      <div class="blog-title text">${blogData.title}</div>
+      <div class="blog-content text"><a class="space"></a> ${blogData.content}</div> 
+      <div class="blog-date text">${blogData.date}</div>
     </div>
     `);
   });
