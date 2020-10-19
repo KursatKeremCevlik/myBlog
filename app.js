@@ -5,8 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const app = express();
 
-// const URL = 'mongodb+srv://ownerUser:12345@cluster0.zqmnm.mongodb.net/blog';
-const URL = 'mongodb://localhost/myBlog';
+const URL = 'mongodb+srv://ownerUser:12345@cluster0.zqmnm.mongodb.net/blog';
+// const URL = 'mongodb://localhost/myBlog';
 const mongoDB = require('./helper/db')(URL);
 
 app.get('/', (req, res) => {
