@@ -9,9 +9,6 @@ const URL = 'mongodb+srv://ownerUser:12345@cluster0.zqmnm.mongodb.net/blog';
 // const URL = 'mongodb://localhost/myBlog';
 const mongoDB = require('./helper/db')(URL);
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/sheets/htmls/homePage.html');
 });
@@ -22,6 +19,9 @@ app.use('/js/homePage', express.static(path.join(__dirname, '/sheets/js/homePage
 app.use('/js/adminPage', express.static(path.join(__dirname, '/sheets/js/adminPage.js')));
 
 const expressOprt = require('./operations/expressOprt')(app, express, logger, cookieParser, path);
-const Errors = require('./operations/errors')(app, createError);
+// const Errors = require('./operations/errors')(app, createError);
+app.use(function (req, res, next) {
+    next(createError(404));
+});
 
 module.exports = app;
