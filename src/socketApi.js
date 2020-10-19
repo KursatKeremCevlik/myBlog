@@ -23,18 +23,23 @@ io.on('connection', (socket) => {
   });
 
   socket.on('NEW_COMMENT', (data) => {
-    const commentData = new Comments({
-      comment: data.comment
-    });
-    commentData.save((err) => {
-      if(!err){
-        const text = 'Geri bildiriminiz için teşekkürler';
-        socket.emit('COMMENT_STATUS', { text });
-      }else{
-        const text = 'Bir sıkıntıdan ötürü geribildiriminiz alınmadı';
-        socket.emit('COMMENT_STATUS', { text });
-      }
-    });
+    if(data.comment){
+      const commentData = new Comments({
+        comment: data.comment
+      });
+      commentData.save((err) => {
+        if(!err){
+          const text = 'Geri bildiriminiz için teşekkürler';
+          socket.emit('COMMENT_STATUS', { text });
+        }else{
+          const text = 'Bir sıkıntıdan ötürü geribildiriminiz alınmadı';
+          socket.emit('COMMENT_STATUS', { text });
+        }
+      });
+    }else{
+      const text = 'Herhangi bir şey yazmadınız';
+      socket.emit('COMMENT_STATUS', { text });
+    }
   });
 });
 
