@@ -7,11 +7,17 @@ $(() => {
   $('.code-row').on('click', () => {open_code_page();});
   $('.follow-row').on('click', () => {open_follow_page();});
   $('.comment-row').on('click', () => {open_comment_page();});
-  $('.chat-row').on('click', () => {open_chat_page();});
 
   $('.instagram').on('click', () => {location.href = 'https://www.instagram.com/krstkerem01/';});
   $('.github').on('click', () => {location.href = 'https://github.com/KursatKeremCevlik';});
   $('.linkedin').on('click', () => {location.href = 'https://www.linkedin.com/in/k%C3%BCr%C5%9Fat-kerem-%C3%A7evlik-1b855b1b1/';});
+
+  $('.input-button').on('click', () => {
+    const Comment = document.getElementById('comment-input');
+    const comment = Comment.value;
+    socket.emit('NEW_COMMENT', {comment});
+    Comment.value = '';
+  });
 
   socket.on('BLOG_DATAS', (blogData) => {
     $('.blogPage').append(`
@@ -20,17 +26,11 @@ $(() => {
       <div class="blog-content text"><a class="space"></a> ${blogData.content}</div> 
       <div class="blog-date text">${blogData.date}</div>
     </div>
-    <div class="blog">
-      <div class="blog-title text">${blogData.title}</div>
-      <div class="blog-content text"><a class="space"></a> ${blogData.content}</div> 
-      <div class="blog-date text">${blogData.date}</div>
-    </div>
-    <div class="blog">
-      <div class="blog-title text">${blogData.title}</div>
-      <div class="blog-content text"><a class="space"></a> ${blogData.content}</div> 
-      <div class="blog-date text">${blogData.date}</div>
-    </div>
     `);
+  });
+
+  socket.on('COMMENT_STATUS', (data) => {
+    $('.comment-title').html(`${data.text}`);
   });
 
   /* _-_-_-_-_-_-_-_-_-_-_-_-_------FUNCTIONS-----_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -39,14 +39,12 @@ $(() => {
   const codeRow = document.getElementById('code-row');
   const followRow = document.getElementById('follow-row');
   const commentRow = document.getElementById('comment-row');
-  const chatRow = document.getElementById('chat-row');
   
   const open_blog_page = () => {
     blogRow.style.background = 'rgb(94, 62, 4)';
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(59, 4, 104)';
     commentRow.style.background = 'rgb(59, 4, 104)';
-    chatRow.style.background = 'rgb(59, 4, 104)';
     invis();
     $('.blogPage').show();
   }
@@ -55,7 +53,6 @@ $(() => {
     codeRow.style.background = 'rgb(94, 62, 4)';
     followRow.style.background = 'rgb(59, 4, 104)';
     commentRow.style.background = 'rgb(59, 4, 104)';
-    chatRow.style.background = 'rgb(59, 4, 104)';
     invis();
     $('.codePage').show();
   }
@@ -64,7 +61,6 @@ $(() => {
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(94, 62, 4)';
     commentRow.style.background = 'rgb(59, 4, 104)';
-    chatRow.style.background = 'rgb(59, 4, 104)';
     invis();
     $('.followPage').show();
   }
@@ -73,25 +69,14 @@ $(() => {
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(59, 4, 104)';
     commentRow.style.background = 'rgb(94, 62, 4)';
-    chatRow.style.background = 'rgb(59, 4, 104)';
     invis();
     $('.commentPage').show();
-  }
-  const open_chat_page = () => {
-    blogRow.style.background = 'rgb(59, 4, 104)';
-    codeRow.style.background = 'rgb(59, 4, 104)';
-    followRow.style.background = 'rgb(59, 4, 104)';
-    commentRow.style.background = 'rgb(59, 4, 104)';
-    chatRow.style.background = 'rgb(94, 62, 4)';
-    invis();
-    $('.chatPage').show();
   }
   const invis = () => {
     $('.blogPage').hide();
     $('.codePage').hide();
     $('.followPage').hide();
     $('.commentPage').hide();
-    $('.chatPage').hide();
   }
   /* _-_-_-_-_-_-_-_-_-_-_-_-_------FUNCTIONS-----_-_-_-_-_-_-_-_-_-_-_-_-_- */
 });

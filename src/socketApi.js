@@ -3,6 +3,7 @@ const io = socketio();
 
 // Models
 const Blog = require('../models/Blog');
+const Comments = require('../models/Comments');
 
 const socketApi = { };
 socketApi.io = io;
@@ -17,6 +18,21 @@ io.on('connection', (socket) => {
           let blogData = data[i]
           socket.emit('BLOG_DATAS', blogData);
         }
+      }
+    });
+  });
+
+  socket.on('NEW_COMMENT', (data) => {
+    const commentData = new Comments({
+      comment: data.comment
+    });
+    commentData.save((err) => {
+      if(!err){
+        const text = 'Geri bildiriminiz için teşekkürler';
+        socket.emit('COMMENT_STATUS', { text });
+      }else{
+        const text = 'Bir sıkıntıdan ötürü geribildiriminiz alınmadı';
+        socket.emit('COMMENT_STATUS', { text });
       }
     });
   });
