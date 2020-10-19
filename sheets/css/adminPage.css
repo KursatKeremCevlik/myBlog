@@ -1,0 +1,49 @@
+body{
+    background-color: black;
+    color: white;
+}
+.page{
+    border: 1px solid red;
+    min-width: 1300px;
+    max-width: 1300px;
+    min-height: 600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}.control-room{
+    border: 1px solid red;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 128px;
+    text-align: center;
+}.control-text{
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}.control-room-input{
+    margin-bottom: 6px;
+    width: 250px;
+    transition: 0.3s;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 20px;
+    text-align: center;
+}.control-room-buton{
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    outline: none;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.3s;
+}.control-room-buton:hover{
+    color: black;
+    background-color: white;
+}

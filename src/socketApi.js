@@ -41,6 +41,18 @@ io.on('connection', (socket) => {
       socket.emit('COMMENT_STATUS', { text });
     }
   });
+
+  socket.on('ADMIN_CONTROL_REQUEST', (data) => {
+    if(!data.username){
+      const text = 'Kullanıcı adı girmediniz';
+      socket.emit('ADMIN_CONTROL_RESPONSE', { text });
+    }else if(!data.password){
+      const text = 'Şifre girmediniz';
+      socket.emit('ADMIN_CONTROL_RESPONSE', { text });
+    }else{
+      
+    }
+  });
 });
 
 module.exports = socketApi;
