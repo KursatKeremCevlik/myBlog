@@ -11,6 +11,21 @@ $(() => {
   socket.on('SUCCESS_ADMIN_LOGIN', () => {
     $('.page').hide();
     $('.admin_room').show();
-    localStorage.clear();
+  });
+
+  $('.add_new_blog').on('click', () => {
+    $('.adminPage').hide();
+    $('.butons_home').hide();
+    $('.new_blog').show();
+  });
+  $('.show_comment_details').on('click', () => {
+    $('.adminPage').hide();
+    $('.butons_home').hide();
+    $('.show_comment').show();
+  });
+  $('.add_new_admin').on('click', () => {
+    $('.adminPage').hide();
+    $('.butons_home').hide();
+    $('.new_admin').show();
   });
 });

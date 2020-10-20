@@ -25,8 +25,29 @@ io.on('connection', (socket) => {
 
   socket.on('NEW_COMMENT', (data) => {
     if(data.comment){
+      let a = true;
+      let idValue;
+      Comments.find((err, object) => {
+        if(!err){
+          while(a){
+            let finish = true;
+            idValue = Math.floor(Math.random() * 5);
+            for(var i = 0; i < object.length; i++){
+              let veri = object[i];
+              if(veri.SecretId == idValue){
+                // Wrong id. Try another id.
+                finish = false;
+              }
+            }
+            if(finish){
+              a = false;
+            }
+          }
+        }
+      });
       const commentData = new Comments({
-        comment: data.comment
+        comment: data.comment,
+        secretID: idValue
       });
       commentData.save((err) => {
         if(!err){
@@ -55,7 +76,6 @@ io.on('connection', (socket) => {
         if(!err && object[0]){
           const success = 1
           const link = '/adminPage/'
-          // 5f8d5f1d50b2231a885868f1
           const databaseID = object[0]._id;
           socket.emit('ADMIN_CONTROL_RESPONSE', { success, link, databaseID });
         }else{
