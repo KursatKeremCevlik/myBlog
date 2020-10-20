@@ -1,16 +1,16 @@
 $(() => {
-//   const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
-  const socket = io.connect('http://localhost:3000');
+  const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
+  // const socket = io.connect('http://localhost:3000');
+  const databaseID = localStorage.getItem('kursatkerem-blog-admin-ID');
 
-  const controlForm = document.getElementById('control-form');
-  const controlButon = document.getElementById('control-room-buton');
-  controlButon.value = 'Onay için gönder';
-  const Username = document.getElementById('control-room-username');
-  const Password = document.getElementById('control-room-password');
-  
-  controlForm.addEventListener('submit', e => {
-    const username = Username.value;
-    const password = Password.value;
-    socket.emit('ADMIN_CONTROL_REQUEST', { username, password });
+  socket.emit('PLEASE_AUTH_ADMIN', { databaseID });
+  $('.waiting_room').show();
+
+  socket.on('PLEASE_WAIT', () => {$('.page').hide();$('.waiting_room').show();});
+  socket.on('WRONG_ADMIN_LOGIN', () => {$('.page').hide();$('.wrong_account_room').show();});
+  socket.on('SUCCESS_ADMIN_LOGIN', () => {
+    $('.page').hide();
+    $('.admin_room').show();
+    localStorage.clear();
   });
 });

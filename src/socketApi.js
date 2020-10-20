@@ -4,6 +4,7 @@ const io = socketio();
 // Models
 const Blog = require('../models/Blog');
 const Comments = require('../models/Comments');
+const Admin = require('../models/Admin');
 
 const socketApi = { };
 socketApi.io = io;
@@ -50,8 +51,37 @@ io.on('connection', (socket) => {
       const text = 'Şifre girmediniz';
       socket.emit('ADMIN_CONTROL_RESPONSE', { text });
     }else{
-      
+      Admin.find({username: data.username, password: data.password}, (err, object) => {
+        if(!err && object[0]){
+          const success = 1
+          const link = '/adminPage/'
+          // 5f8d5f1d50b2231a885868f1
+          const databaseID = object[0]._id;
+          socket.emit('ADMIN_CONTROL_RESPONSE', { success, link, databaseID });
+        }else{
+          const wrong = 1;
+          const text = 'Kullanıcı adı veya şifre hatalı';
+          socket.emit('ADMIN_CONTROL_RESPONSE', { wrong, text });
+        }
+      });
     }
+  });
+
+  socket.on('PLEASE_AUTH_ADMIN', (data) => {
+    socket.emit('PLEASE_WAIT');
+    Admin.find((err, object) => {
+      let finish = false;
+      for(var i = 0; i < object.length; i++){
+        if(!err && data.databaseID == object[i]._id){
+          finish = true;
+        }
+      }
+      if(finish){
+        socket.emit('SUCCESS_ADMIN_LOGIN');
+      }else{
+        socket.emit('WRONG_ADMIN_LOGIN');
+      }
+    });
   });
 });
 
