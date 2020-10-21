@@ -1,97 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/socket.io/socket.io.js"></script>
-    <!-- <script src="http://localhost:3000/socket.io/socket.io.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Admin Page</title>
-    <link rel="stylesheet" href="/css/adminPage">
-    <script src="/js/adminPage"></script>
-    <!-- <script src="../js/adminPage.js"></script>
-    <link rel="stylesheet" href="../css/adminPage.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/adminPage"></script>
+  <link rel="stylesheet" href="/css/adminPage">
+  <title>Admin Page</title>
 </head>
 <body>
-    <div class="ControlPage">
-        <div class="top">
-            <h1 class="title">AdminPage</h1> <br>
-            <hr class="hr">
-        </div>
-        <div class="ControlFormHome">
-            <form id="form">
-                Kullanıcı adı ? <br>
-                <input type="text" id="username" class="input" autocomplete='off'> <br>
-                Şifre <br>
-                <input type="password" id="password" class="input" autocomplete='off'> <br>
-                <input type="submit" id="ControlButon">
-            </form>
-        </div>
-        <div class="control_messages">
-            <div class="WRONG_USERNAME">Kullanıcı adı girmediniz</div>
-            <div class="WRONG_PASSWORD">Şifre girmediniz</div>
-            <div class="CONTROL-1">Kontrol ediliyor.</div>
-            <div class="CONTROL-2">Kontrol ediliyor..</div>
-            <div class="CONTROL-3">Kontrol ediliyor...</div>
-            <div class="WRONG_ACCOUNT">Kullanıcı adı veya şifreniz hatalı</div>
-        </div>
+  <div class="admin_room page">
+    <div class="butons_home">
+      <button class="add_new_blog buton">Yazı Ekle</button> <br>
+      <button class="show_comment_details buton">Site yorumları</button> <br>
+      <button class="add_new_admin buton">Admin Ekle</button>
     </div>
-    <div class="firstPage">
-        <div class="top-box">
-            <h1 class="hero-title"></h1>
-            <hr class="hr">
-        </div>
-        <div class="butonHome">
-            <button class="writeBlogButton">Blog yaz !</button>
-        </div>
+    <div class="new_blog adminPage">
+      <h1>New Blog</h1>
     </div>
-    <div class="secondPage">
-        <div class="top-box">
-            <h1 class="hero-title">Blog</h1>
-            <hr class="hr">
-        </div>
-        <div class="BlogFormHome">
-            <div class="one">
-                <form id="blogForm">
-                    <div class="titleFormHome">
-                        <div class="formTitle"><b> Title </b></div>
-                        <input type="text" id="title" class="input" autocomplete="off">
-                    </div>
-                    <div class="dateFormHome">
-                        <div class="formDate"><b> Date </b></div>
-                        <input type="text" id="date" class="input" autocomplete="off">
-                    </div>
-                </form>
-                <div class="ContentButonHome">
-                    <button class="ContentButon">İçerik için devam et</button>
-                </div>
-            </div>
-        </div>
-        <div class="ContentFormHome">
-            <div class="two">
-                <form id="ContentForm">
-                    <div class="contentTitle">
-                        <div class="formTitle"><b> Content </b></div>
-                        <input type="text" id="content" class="input" autocomplete="off">
-                    </div>
-                </form>
-            </div>
-            <div class="PreviewButonHome">
-                <button class="PreviewButon">Önizle</button>
-            </div>
-        </div>
-        <div class="PreviewPage">
-            <div class="PreviewBlogTitle"></div> <br>
-            <div class="PreviewBlogContent"></div> <br>
-            <div class="PreviewBlogDate"></div>
-        </div>
-        <div class="SaveButtonHome">
-            <button class="SaveButton">Kaydet</button>
-        </div>
-        <div class="messages">
-            <div class="true_blog_save">Başarıyla kayıt edildi</div>
-            <div class="wrong_blog_save">Kaydedilirken bir hatayla karşılaşıldı</div>
-        </div>
+    <div class="show_comment adminPage">
+      <h1>Show Comment</h1>
     </div>
+    <div class="new_admin adminPage">
+      <h1>New Admin</h1>
+    </div>
+  </div>
+  <div class="waiting_room page"><h1>Waiting Room</h1></div>
+  <div class="wrong_account_room page">
+    <div class="wrong_account_room_div">
+      <div class="container">
+        <div class="wrong-account-room-title first-title">Dude what's your purpose</div>
+        <div class="wrong-account-room-title second-title">You cannot enter here without permission</div>
+        <a href="/" class="lınk">Go back</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

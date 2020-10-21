@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const Admin = new Schema({
     name: String,
     surname: String,
-    year: Number,
     username: String,
     password: String
 });
