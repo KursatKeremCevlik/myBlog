@@ -1,6 +1,6 @@
 $(() => {
-  // const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
-  const socket = io.connect('http://localhost:3000');
+  const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
+  // const socket = io.connect('http://localhost:3000');
   socket.emit('PLEASE_BLOG_DATAS');
 
   $('.blog-row').on('click', () => {open_blog_page();});
