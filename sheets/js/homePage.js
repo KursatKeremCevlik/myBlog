@@ -1,12 +1,13 @@
 $(() => {
-  const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
-  // const socket = io.connect('http://localhost:3000');
+  // const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
+  const socket = io.connect('http://localhost:3000');
   socket.emit('PLEASE_BLOG_DATAS');
 
   $('.blog-row').on('click', () => {open_blog_page();});
   $('.code-row').on('click', () => {open_code_page();});
   $('.follow-row').on('click', () => {open_follow_page();});
   $('.comment-row').on('click', () => {open_comment_page();});
+  $('.null-row').on('click', () => {open_null_page();});
 
   $('.instagram').on('click', () => {location.href = 'https://www.instagram.com/krstkerem01/';});
   $('.github').on('click', () => {location.href = 'https://github.com/KursatKeremCevlik';});
