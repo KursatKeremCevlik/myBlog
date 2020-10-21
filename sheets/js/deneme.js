@@ -18,7 +18,7 @@ var mouseIsDown = false;
 
 function init() {
 
-  canvas = document.getElementById('commenPage');
+  canvas = document.getElementById('commentPage');
   if (canvas && canvas.getContext) {
 		context = canvas.getContext('2d');
 		
