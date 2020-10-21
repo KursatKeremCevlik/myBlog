@@ -18,7 +18,7 @@ var mouseIsDown = false;
 
 function init() {
 
-  canvas = document.getElementById('chatScreen');
+  canvas = document.getElementById('commenPage');
   if (canvas && canvas.getContext) {
 		context = canvas.getContext('2d');
 		
