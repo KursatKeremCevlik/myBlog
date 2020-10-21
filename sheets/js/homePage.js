@@ -40,12 +40,14 @@ $(() => {
   const codeRow = document.getElementById('code-row');
   const followRow = document.getElementById('follow-row');
   const commentRow = document.getElementById('comment-row');
+  const nullRow = document.getElementById('null-row');
   
   const open_blog_page = () => {
     blogRow.style.background = 'rgb(94, 62, 4)';
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(59, 4, 104)';
     commentRow.style.background = 'rgb(59, 4, 104)';
+    nullRow.style.background = 'rgb(59, 4, 104)';
     invis();
     $('.blogPage').show();
   }
@@ -54,6 +56,7 @@ $(() => {
     codeRow.style.background = 'rgb(94, 62, 4)';
     followRow.style.background = 'rgb(59, 4, 104)';
     commentRow.style.background = 'rgb(59, 4, 104)';
+    nullRow.style.background = 'rgb(59, 4, 104)';
     invis();
     $('.codePage').show();
   }
@@ -62,6 +65,7 @@ $(() => {
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(94, 62, 4)';
     commentRow.style.background = 'rgb(59, 4, 104)';
+    nullRow.style.background = 'rgb(59, 4, 104)';
     invis();
     $('.followPage').show();
   }
@@ -70,14 +74,25 @@ $(() => {
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(59, 4, 104)';
     commentRow.style.background = 'rgb(94, 62, 4)';
+    nullRow.style.background = 'rgb(59, 4, 104)';
     invis();
     $('.commentPage').show();
+  }
+  const open_null_page = () => {
+    blogRow.style.background = 'rgb(59, 4, 104)';
+    codeRow.style.background = 'rgb(59, 4, 104)';
+    followRow.style.background = 'rgb(59, 4, 104)';
+    commentRow.style.background = 'rgb(59, 4, 104)';
+    nullRow.style.background = 'rgb(94, 62, 4)';
+    invis();
+    $('.tryPage').show();
   }
   const invis = () => {
     $('.blogPage').hide();
     $('.codePage').hide();
     $('.followPage').hide();
     $('.commentPage').hide();
+    $('.tryPage').hide();
   }
   /* _-_-_-_-_-_-_-_-_-_-_-_-_------FUNCTIONS-----_-_-_-_-_-_-_-_-_-_-_-_-_- */
 });
