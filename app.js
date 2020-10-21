@@ -28,7 +28,7 @@ app.use('/css/SignUp', express.static(path.join(__dirname, '/sheets/css/SignUp.c
 app.use('/js/homePage', express.static(path.join(__dirname, '/sheets/js/homePage.js')));
 app.use('/js/adminPage', express.static(path.join(__dirname, '/sheets/js/adminPage.js')));
 app.use('/js/SignUp', express.static(path.join(__dirname, '/sheets/js/SignUp.js')));
-
+app.use('/deneme', express.static(path.join(__dirname, '/sheets/js/deneme.js')));
 
 const expressOprt = require('./operations/expressOprt')(app, express, logger, cookieParser, path);
 const Errors = require('./operations/errors')(app, createError);
