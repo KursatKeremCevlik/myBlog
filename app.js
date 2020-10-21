@@ -19,7 +19,6 @@ app.use('/css/adminPage', express.static(path.join(__dirname, '/sheets/css/admin
 app.use('/js/homePage', express.static(path.join(__dirname, '/sheets/js/homePage.js')));
 app.use('/js/adminPageControl', express.static(path.join(__dirname, '/sheets/js/adminPageControl.js')));
 app.use('/js/adminPage', express.static(path.join(__dirname, '/sheets/js/adminPage.js')));
-app.use('/deneme', express.static(path.join(__dirname, '/sheets/js/deneme.js')));
 
 const expressOprt = require('./operations/expressOprt')(app, express, logger, cookieParser, path);
 // const Errors = require('./operations/errors')(app, createError);
