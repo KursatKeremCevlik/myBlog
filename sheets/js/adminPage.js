@@ -39,7 +39,4 @@ $(() => {
     $('.butons_home').hide();
     $('.new_admin').show();
   });
-  $('.adminPage').hide();
-  $('.butons_home').hide();
-  $('.show_comment').show();
 });
