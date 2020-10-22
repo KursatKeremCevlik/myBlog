@@ -11,6 +11,19 @@ body{
     max-height: 455px;
 }
 .text{color: white;}
+.container{
+    margin-top: 64px;
+}.hero-title{
+    text-align: center;
+}.text-home{
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 600px;
+    max-width: 600px;
+    font-size: 20px;
+    margin-top: 32px;
+}.infos{color: rgb(102, 102, 243); float: right; margin-top: 12px;}
+.secret-name{color: rgb(250, 61, 61);}
 
 .row:after {
     content: "";

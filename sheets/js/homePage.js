@@ -3,6 +3,7 @@ $(() => {
   // const socket = io.connect('http://localhost:3000');
   socket.emit('PLEASE_BLOG_DATAS');
 
+  $('.about-row').on('click', () => {open_about_page();});
   $('.blog-row').on('click', () => {open_blog_page();});
   $('.code-row').on('click', () => {open_code_page();});
   $('.follow-row').on('click', () => {open_follow_page();});
@@ -35,12 +36,14 @@ $(() => {
 
   /* _-_-_-_-_-_-_-_-_-_-_-_-_------FUNCTIONS-----_-_-_-_-_-_-_-_-_-_-_-_-_- */
   // HTML Elements
+  const aboutRow = document.getElementById('about-row');
   const blogRow = document.getElementById('blog-row');
   const codeRow = document.getElementById('code-row');
   const followRow = document.getElementById('follow-row');
   const commentRow = document.getElementById('comment-row');
   
   const open_blog_page = () => {
+    aboutRow.style.background = 'rgb(59, 4, 104)';
     blogRow.style.background = 'rgb(94, 62, 4)';
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(59, 4, 104)';
@@ -49,6 +52,7 @@ $(() => {
     $('.blogPage').show();
   }
   const open_code_page = () => {
+    aboutRow.style.background = 'rgb(59, 4, 104)';
     blogRow.style.background = 'rgb(59, 4, 104)';
     codeRow.style.background = 'rgb(94, 62, 4)';
     followRow.style.background = 'rgb(59, 4, 104)';
@@ -57,6 +61,7 @@ $(() => {
     $('.codePage').show();
   }
   const open_follow_page = () => {
+    aboutRow.style.background = 'rgb(59, 4, 104)';
     blogRow.style.background = 'rgb(59, 4, 104)';
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(94, 62, 4)';
@@ -65,6 +70,7 @@ $(() => {
     $('.followPage').show();
   }
   const open_comment_page = () => {
+    aboutRow.style.background = 'rgb(59, 4, 104)';
     blogRow.style.background = 'rgb(59, 4, 104)';
     codeRow.style.background = 'rgb(59, 4, 104)';
     followRow.style.background = 'rgb(59, 4, 104)';
@@ -72,7 +78,17 @@ $(() => {
     invis();
     $('.commentPage').show();
   }
+  const open_about_page = () => {
+    aboutRow.style.background = 'rgb(94, 62, 4)';
+    blogRow.style.background = 'rgb(59, 4, 104)';
+    codeRow.style.background = 'rgb(59, 4, 104)';
+    followRow.style.background = 'rgb(59, 4, 104)';
+    commentRow.style.background = 'rgb(59, 4, 104)';
+    invis();
+    $('.aboutPage').show();
+  }
   const invis = () => {
+    $('.aboutPage').hide();
     $('.blogPage').hide();
     $('.codePage').hide();
     $('.followPage').hide();
