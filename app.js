@@ -23,7 +23,7 @@ app.use('/js/adminPage', express.static(path.join(__dirname, '/sheets/js/adminPa
 const expressOprt = require('./operations/expressOprt')(app, express, logger, cookieParser, path);
 // const Errors = require('./operations/errors')(app, createError);
 app.use(function (req, res, next) {
-    next(createError(404));
+    res.sendFile(__dirname + '/sheets/htmls/errorPage.html');
 });
 
 module.exports = app;
