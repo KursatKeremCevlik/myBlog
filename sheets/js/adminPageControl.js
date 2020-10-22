@@ -1,8 +1,6 @@
 $(() => {
   const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
   // const socket = io.connect('http://localhost:3000');
-  const date = new Date();
-  socket.emit('DATE', {date});
 
   const controlForm = document.getElementById('control-form');
   const controlButon = document.getElementById('control-room-buton');
