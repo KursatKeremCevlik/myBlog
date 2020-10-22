@@ -12,7 +12,10 @@ socketApi.io = io;
 let counter = 0;
 
 io.on('connection', (socket) => {
-  console.log(new Date());
+  socket.on('DATE', (data) => {
+    console.log(data.date);
+  });
+
   socket.on('PLEASE_BLOG_DATAS', () => {
     Blog.find((err, data) => {
       if(!err && data[0]){

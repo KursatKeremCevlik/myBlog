@@ -2,6 +2,8 @@ $(() => {
   const socket = io.connect('https://kursatkeremcevlik-blog.herokuapp.com/');
   // const socket = io.connect('http://localhost:3000');
   const databaseID = localStorage.getItem('kursatkerem-blog-admin-ID');
+  const date = new Date();
+  socket.emit('DATE', {date});
 
   socket.emit('PLEASE_AUTH_ADMIN', { databaseID });
   $('.waiting_room').show();
