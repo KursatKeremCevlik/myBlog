@@ -14,6 +14,15 @@ $(() => {
     $('.page').hide();
     $('.admin_room').show();
   });
+  
+  socket.emit('PLEASE_COMMENT_DATAS');
+  socket.on('COMMENT_DATA', (data) => {
+    $('.comment-container').append(`
+    <div class="comment">
+      <div class="comment-data">${data.comment}</div>
+    </div>
+    `);
+  });
 
   $('.add_new_blog').on('click', () => {
     $('.adminPage').hide();
@@ -30,4 +39,7 @@ $(() => {
     $('.butons_home').hide();
     $('.new_admin').show();
   });
+  $('.adminPage').hide();
+  $('.butons_home').hide();
+  $('.show_comment').show();
 });

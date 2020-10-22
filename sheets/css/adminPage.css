@@ -48,4 +48,19 @@ body{background-color: black; color: white;}
     height: 45px;
 }
 
+.comment{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    min-width: 600px;
+    max-width: 600px;
+    border: 2px solid red;
+    text-align: center;
+    font-size: 20px; 
+    margin-top: 12px; 
+    margin-bottom: 24px;
+}.comment-data{margin-top: 12px; margin-bottom: 12px;}
+
 /* Admin Page */

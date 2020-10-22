@@ -107,6 +107,17 @@ io.on('connection', (socket) => {
       }
     });
   });
+
+  socket.on('PLEASE_COMMENT_DATAS', () => {
+    Comments.find((err, object) => {
+      if(!err && object[0]){
+        for(var i = 0; i < object.length; i++){
+          const comment = object[i].comment;
+          socket.emit('COMMENT_DATA', { comment });
+        }
+      }
+    });
+  });
 });
 
 module.exports = socketApi;
